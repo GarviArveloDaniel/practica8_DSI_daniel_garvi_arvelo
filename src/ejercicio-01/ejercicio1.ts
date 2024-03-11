@@ -18,7 +18,7 @@ export interface Observer {
 export class NewsFeed implements Observable {
   private observers: Observer[] = [];
   
-  constructor(public news: string[]) {
+  constructor(private news: string[]) {
   }
 
   getNews(): string[] {
@@ -61,7 +61,7 @@ export class FeedObserver implements Observer {
 
   update(observable: Observable) {
     if (observable instanceof NewsFeed) {
-      this.myNotifiedNews = observable.news;
+      this.myNotifiedNews = observable.getNews();
     }
   }
 }
