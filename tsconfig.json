@@ -1,0 +1,17 @@
+{
+  "exclude": [
+    "./tests",
+    "./node_modules",
+    "./dist"
+  ],
+  "compilerOptions": {
+    "target": "ES6",
+    "module": "ES6",
+    "declaration": true, //otro archivo con tipos
+    "rootDir": "./src",
+    "outDir": "./dist",
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "noImplicitReturns": true,
+  }
+}
